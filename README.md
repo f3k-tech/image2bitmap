@@ -1,4 +1,4 @@
-# img-to-bitmap
+# image2bitmap
 
 ## Windows Executable
 
