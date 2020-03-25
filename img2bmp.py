@@ -14,8 +14,12 @@
 #
 # Windows:
 # py img2bmp.py "C:/path/to/file/image.jpg" 26
+from PIL import Image
+import sys
 
-print ("""
+while len(sys.argv) == 1:
+
+    print ("""
 ================================================
 mmmmm  m    m   mmm   mmmm  mmmmm  m    m mmmmm
   #    ##  ## m"   " "   "# #    # ##  ## #   "#
@@ -23,29 +27,28 @@ mmmmm  m    m   mmm   mmmm  mmmmm  m    m mmmmm
   #    # "" # #    #   m"   #    # # "" # #
 mm#mm  #    #  "mmm" m#mmmm #mmmm" #    # #
 ================================================
-""")
+    """)
 
-from PIL import Image
-import sys
+    # ask for filename/path if not provided
+    if len(sys.argv) == 1:
+        print ("Enter filename or path:")
+        filename = input()
+    else:
+        filename = sys.argv[1]
 
-# ask for filename/path if not provided
-if len(sys.argv) == 1:
-    print ("Enter filename or path:")
-    filename = input()
-else:
-    filename = sys.argv[1]
+    # Import file
+    img = Image.open(filename)
 
-# Import file
-img = Image.open(filename)
+    # Ask for colors if not provided
+    if len(sys.argv) == 3:
+        colors = sys.argv[2]
+    else:
+        print ("Amount of colors:")
+        colors = input()
 
-# Ask for colors if not provided
-if len(sys.argv) == 3:
-    colors = sys.argv[2]
-else:
-    print ("Amount of colors:")
-    colors = input()
+    newname = filename.split('.')[0] + ".bmp"
+    img = img.convert("RGB", palette = Image.ADAPTIVE, colors = int(colors))
+    img = img.convert("P", palette = Image.ADAPTIVE, colors = int(colors))
+    img.save(newname)
 
-newname = filename.split('.')[0] + ".bmp"
-img = img.convert("RGB", palette = Image.ADAPTIVE, colors = int(colors))
-img = img.convert("P", palette = Image.ADAPTIVE, colors = int(colors))
-img.save(newname)
+    print ("Image converted to: " + newname)
