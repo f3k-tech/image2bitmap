@@ -14,6 +14,7 @@
 #
 # Windows:
 # py img2bmp.py "C:/path/to/file/image.jpg" 26
+
 from PIL import Image
 import sys
 
