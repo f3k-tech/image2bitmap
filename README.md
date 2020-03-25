@@ -1,11 +1,13 @@
 # image2bitmap
 
-## Windows Executable
+## Executables
 
 If you don't want to install python you can use the executable found in:
 
+
 ```bash
-dist/img2bmp.exe
+dist/img2bmp.exe    # Windows
+dist/img2bmp        # Linux
 ```
 
 ## Install dependencies
