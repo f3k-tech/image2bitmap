@@ -9,11 +9,19 @@
 #
 # For Example:
 #
-# Linux: 
-# python3 img2bmp.py "/path/to/file/image.jpg" 26 
+# Linux:
+# python3 img2bmp.py "/path/to/file/image.jpg" 26
 #
 # Windows:
 # py img2bmp.py "C:/path/to/file/image.jpg" 26
+
+print ("""
+    mmmmm  m    m   mmm   mmmm  mmmmm  m    m mmmmm
+      #    ##  ## m"   " "   "# #    # ##  ## #   "#
+      #    # ## # #   mm     m" #mmmm" # ## # #mmm#"
+      #    # "" # #    #   m"   #    # # "" # #
+    mm#mm  #    #  "mmm" m#mmmm #mmmm" #    # #
+""")
 
 from PIL import Image
 import sys
