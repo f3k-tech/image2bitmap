@@ -28,7 +28,7 @@ import sys
 
 # ask for filename/path if not provided
 if len(sys.argv) == 1:
-    print ("File name or path:")
+    print ("Enter filename or path:")
     filename = input()
 else:
     filename = sys.argv[1]
