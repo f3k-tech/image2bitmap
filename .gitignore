@@ -4,4 +4,4 @@ dist
 img2bmp.spec
 
 # Don't ignore:
-!dist/img2bmp.exe
+!*/*.exe
