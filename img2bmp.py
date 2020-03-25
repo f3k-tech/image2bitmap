@@ -17,8 +17,9 @@
 
 from PIL import Image
 import sys
+loop = True
 
-while len(sys.argv) == 1:
+while loop == True:
 
     print ("""
 ================================================
@@ -35,14 +36,16 @@ mm#mm  #    #  "mmm" m#mmmm #mmmm" #    # #
         print ("Enter filename or path:")
         filename = input()
     else:
-        filename = sys.argv[1]
+        filename = str(sys.argv[1])
+        print ("Filename: " + filename)
 
     # Import file
     img = Image.open(filename)
 
     # Ask for colors if not provided
     if len(sys.argv) == 3:
-        colors = sys.argv[2]
+        colors = str(sys.argv[2])
+        print ("Amount of colors: " + colors)
     else:
         print ("Amount of colors:")
         colors = input()
@@ -53,3 +56,7 @@ mm#mm  #    #  "mmm" m#mmmm #mmmm" #    # #
     img.save(newname)
 
     print ("Image converted to: " + newname)
+
+    # Don't loop if arguments are given
+    if len(sys.argv) > 1:
+        loop = False
