@@ -16,10 +16,11 @@
 # py img2bmp.py "C:/path/to/file/image.jpg" 26
 from PIL import Image
 import sys
+from termcolor import colored, cprint
 
 while len(sys.argv) == 1:
 
-    print ("""
+    cprint("""
 ================================================
 mmmmm  m    m   mmm   mmmm  mmmmm  m    m mmmmm
   #    ##  ## m"   " "   "# #    # ##  ## #   "#
@@ -27,11 +28,11 @@ mmmmm  m    m   mmm   mmmm  mmmmm  m    m mmmmm
   #    # "" # #    #   m"   #    # # "" # #
 mm#mm  #    #  "mmm" m#mmmm #mmmm" #    # #
 ================================================
-    """)
+    """, 'magenta')
 
     # ask for filename/path if not provided
     if len(sys.argv) == 1:
-        print ("Enter filename or path:")
+        cprint ("Enter filename or path:", 'cyan')
         filename = input()
     else:
         filename = sys.argv[1]
@@ -43,7 +44,7 @@ mm#mm  #    #  "mmm" m#mmmm #mmmm" #    # #
     if len(sys.argv) == 3:
         colors = sys.argv[2]
     else:
-        print ("Amount of colors:")
+        cprint ("Amount of colors:", 'cyan' )
         colors = input()
 
     newname = filename.split('.')[0] + ".bmp"
@@ -51,4 +52,4 @@ mm#mm  #    #  "mmm" m#mmmm #mmmm" #    # #
     img = img.convert("P", palette = Image.ADAPTIVE, colors = int(colors))
     img.save(newname)
 
-    print ("Image converted to: " + newname)
+    cprint ("Image converted to: " + newname, 'green')
