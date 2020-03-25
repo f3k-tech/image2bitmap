@@ -16,7 +16,6 @@
 # py img2bmp.py "C:/path/to/file/image.jpg" 26
 from PIL import Image
 import sys
-from termcolor import colored
 
 while len(sys.argv) == 1:
 
