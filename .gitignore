@@ -1,8 +1,4 @@
 # PyInstaller files
 __pycache__
 build
-dist/*
 img2bmp.spec
-
-# Don't ignore executables:
-!dist/*.exe
