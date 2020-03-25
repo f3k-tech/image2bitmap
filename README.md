@@ -2,7 +2,7 @@
 
 ## Windows Executable
 
-If you don't want to install python you can use the executble found in:
+If you don't want to install python you can use the executable found in:
 
 ```bash
 dist/img2bmp.exe
