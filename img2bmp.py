@@ -16,11 +16,13 @@
 # py img2bmp.py "C:/path/to/file/image.jpg" 26
 
 print ("""
+================================================
 mmmmm  m    m   mmm   mmmm  mmmmm  m    m mmmmm
   #    ##  ## m"   " "   "# #    # ##  ## #   "#
   #    # ## # #   mm     m" #mmmm" # ## # #mmm#"
   #    # "" # #    #   m"   #    # # "" # #
 mm#mm  #    #  "mmm" m#mmmm #mmmm" #    # #
+================================================
 """)
 
 from PIL import Image
