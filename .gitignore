@@ -1,4 +1,4 @@
 # PyInstaller files
 __pycache__
 build
-img2bmp.spec
+*.spec
