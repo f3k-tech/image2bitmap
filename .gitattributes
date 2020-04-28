@@ -1,0 +1,2 @@
+# All files in dist folder (executables)
+dist/** filter=lfs diff=lfs merge=lfs -text
