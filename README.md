@@ -4,11 +4,14 @@
 
 If you don't want to install python you can use the executable found here:
 
+### Linux
 
-```bash
-dist/img2bmp        # Linux
-dist/img2bmp.exe    # Windows
-```
+[dist/img2bmp](dist/img2bmp)
+
+### Windows
+
+[dist/img2bmp.exe](dist/img2bmp.exe)
+
 
 ## Install dependencies
 
